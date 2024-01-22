@@ -1,0 +1,556 @@
+
+/* Entete */
+
+.header1{
+    background-color: black;
+  height: 20vh;
+  width: 100vw;
+display: flex;
+}
+
+.logo{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+   justify-content: center;
+   
+}
+
+hr{
+    width: 100vw;
+    
+}
+
+
+/* Navbar */
+
+.navbar{
+    width: 100vw;
+    height: auto;
+}
+
+ul{
+    background-color: black;
+    height: 10vh;
+    width: 100VW;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    color: white;
+    font-size: x-large;
+    
+}
+
+ul div{
+    width: 20VW;
+    height: 10VH;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: white solid;
+    border-width: 1px;
+}
+
+/* image entete */
+
+.imageprincipale{
+    background-image: url(../images/imageentete2.jpg);
+    width: 100vw;
+    height: 80vh;
+   background-position: center;
+   background-size: cover;
+
+}
+
+/* Biographie */
+
+.Biography{
+    padding: 0;
+    margin: 0;
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bioGeneral{
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/logoskz.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+.bioSkz,
+.bioGenese,
+.parcours,
+.realisation,
+.engagement,
+.avenir {
+margin-left: 5VW;
+margin-right: 5vw;
+border-bottom: solid black;
+}
+.avenir{
+    margin-bottom: 5vh;
+}
+
+
+h2 {
+    color: #6F232C;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 8vh;
+}
+
+h3{
+    
+    margin: 0;
+    padding: 0;
+}
+/* photo centre */
+.principal {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Quadrillage membre */
+
+.Membres {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 80vh;
+    margin: 0;
+    margin-top: 50PX;
+    padding: 0;
+}
+
+.Membres div {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 6px solid black; 
+    position: relative;
+}
+
+.Membres span {
+    position: absolute;
+    bottom: 0;
+    left: O;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5;
+}
+
+.Bangchan,
+.Leeknow,
+.Changbin,
+.Hyunjin,
+.Han,
+.Felix,
+.Seugmin,
+.IN {
+    width: 25%;
+    height: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.Bangchan img,
+.Leeknow img,
+.Changbin img,
+.Hyunjin img,
+.Han img,
+.Felix img,
+.Seugmin img,
+.IN img {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+/* Modal */
+
+.main {
+height: 80vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+.popup_container {
+position: absolute;
+top: 50;
+left: 0;
+height: 100vh;
+width: 100%;
+background-color: rgba(0, 0, 0, 0);
+display: none;
+justify-content: center;
+align-items: center;
+}
+
+.popup_container.active {
+display: flex;
+}
+
+.popup {
+height: 600px;
+width: 840px;
+background-color: #89888adc;
+border-radius: 10px;
+padding: 5px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+animation: animationA 1s ease-in-out .5s backwards;
+
+
+}
+
+.image_container {
+position: relative;
+height: 600px;
+width: 420px;
+}
+
+
+.description {
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+@keyframes animationA {
+0% {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+
+/* carrousel */
+
+
+#carrousel{
+width: 410px;
+height: 590px;
+border: solid 4px white;
+position: relative;
+/* background-color: rgba(0, 0, 0, 0.418); */
+overflow: hidden;
+}
+
+#container{
+width: 420px;
+height: 600px;
+}
+
+.bouton{
+position: absolute;
+width: 20px;
+cursor: pointer;
+top: 300px;
+}
+
+#g { 
+left: 0;
+opacity:0.4;
+transition: all 0.3s ease;
+}
+
+#d {
+right: 0;
+opacity: 0.4;
+transition: all 0.3s ease;
+}
+
+#g:hover{
+transform: scale(1.1);
+opacity: 1;
+transition: all 0.3s ease;
+}
+
+#d:hover{
+transform: scale(1.1);
+opacity: 1;
+transition: all 0.3s ease;
+}
+
+.photo{
+width: 420PX;
+height: 600px;
+margin: 0;
+display: inline-block;
+background-size: cover;
+
+}
+
+.popup_close{
+width: 30px;
+height: 30px;
+position: absolute;
+top: 2px;
+right: 10px;
+cursor: pointer;
+transition: 0.5s all ease;
+color: black;
+}
+
+.popup_close:hover{
+ transform: scale(1.2);
+}
+
+/* Partie gauche presentation */
+
+.presentation{
+margin: 0;
+padding: 0;
+height: 100%;
+font-family: Verdana;
+}
+
+.descriptionhaut{
+font-size: larger;
+display: flex;
+justify-content: space-between;
+font-family:'Lucida';
+
+
+}
+
+.deshautcotegauche{
+height: 200px;
+}
+
+.deshautcotedroit{
+margin-top: 10px;
+line-height: 20px;
+}
+.descriptionbas{
+margin-left: 35px;
+font-size: larger;
+line-height: 20px;
+
+}
+
+.imgidentite{
+display: flex;
+justify-content: center;
+margin: 30px;
+margin-bottom: 10PX;
+
+} 
+
+footer{
+    border-top: solid white;
+    
+    
+    width: 100vW;
+    height: 20vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    
+}
+
+.socialmedia {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.socialmedia img{
+    height: 10vh;
+}
+
+.popup_closeMobile{
+    display: none;
+}
+
+.boutonCarrouselMobile{
+    display: none;
+}
+
+.image_containerMobile{
+    display: none;
+}
+
+.popup_containerMobile{
+    display: none;
+}
+/* Format tablette */
+@media screen and (min-width: 401px) and (max-width: 1000px) {
+    /* ul{display: none;}
+    .imgentete{background-image: url(../images/bg_footer.jpg);} */
+}
+
+
+/* Format téléphone */
+@media screen and (max-width: 400px){
+    
+    .imageprincipale{
+        background-image: url(../images/imgtetemobil.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250PX;
+        }
+
+        .divBio{
+            display: none;
+        }
+        .principal{
+            margin: 0;
+            padding: 0;
+            width: 61vh;
+            height: 170vh;
+            flex-wrap: wrap
+        }
+
+        .Membres {
+            display: grid;
+            grid-template-columns: repeat(2, 4fr);
+            width: 100%;
+            height: 160vh;
+           
+        }
+        
+        
+
+        
+        .Membres div {
+            
+            height: 100%;
+        }
+        
+        
+        .Bangchan,
+        .Leeknow,
+        .Changbin,
+        .Hyunjin,
+        .Han,
+        .Felix,
+        .Seugmin,
+        .IN {
+            width: 100%;
+            height: 70%;
+        }
+
+        
+   
+        footer{
+            
+            width: 100vW;
+            height: 10vh;
+            
+            
+        }
+        
+        .socialmedia {
+            border-top: solid white;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+        }
+        .socialmedia img{
+            height: 5vh;
+        }
+
+
+        /* MODALE */
+
+.popup {
+height: 600px;
+width: 100%;
+}
+
+.image_container {
+display: none;
+}
+
+.description {
+    width: 100%;
+    height: 100%;
+    }
+    
+    .deshautcotedroit{
+        width: 200px;
+        font-size: smaller;
+    }
+    .popup_closeMobile {
+        height: 20PX;
+        width: 200PX;
+        display: block;
+    }   
+    .popup_closeMobile{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 27px;
+        right: 12px;
+        cursor: pointer;
+        transition: 0.5s all ease;
+        color: black;
+        }
+        
+        .popup_close:hover{
+         transform: scale(1.2);
+        }
+
+        .boutonCarrouselMobile{
+            display: flex;
+            justify-content: center;
+        }
+
+        .boutonCarrouselMobile button{
+            display: flex;
+            justify-content: center;
+            font-size: larger;
+            letter-spacing: 2PX;
+            font-family: fantasy;
+            width: 60%;
+            height: 40px;
+            background-color: black;
+            color: #6F232C;
+            
+        }
+        /* .menuburger{
+            height: 25px;
+            width: 25px;
+        } */
+    
+    }
+
+
+/* Format ordinateur */
+@media screen and (min-width: 1001px){
+    img.menuburger{display: none;}
+
+}
