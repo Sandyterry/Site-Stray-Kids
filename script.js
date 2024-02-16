@@ -143,22 +143,20 @@ let membresData = [
 let nomMembreActuel = "Bangchan";
 
 let Bangchan = document.querySelector("." + nomMembreActuel);
-let popupContainer = document.querySelector(".popup_container");
-// let popupContainerMobile= document.querySelector(".popup_containerMobile")
+let popupContainer = document.querySelector(".popup_container")
 
 Bangchan.addEventListener("click", function() {
     popupContainer.classList.toggle("active")
 });
 
-// Bangchan.addEventListener("click", function() {
-//     popupContainerMobile.classList.toggle("active")
-// });
+
 
 function chargerInformationsMembre(nomMembre) {
     // Trouver le membre dans la base de données
     let membre = membresData.find(m => m.nom === nomMembre);
 
     if (membre) {
+
         // Charger les informations du membre dans la modale
         
         document.querySelector('.imgidentite img').src = membre.image[0];
@@ -184,6 +182,7 @@ function chargerInformationsMembre(nomMembre) {
 // Associer un gestionnaire d'événements à chaque membre
 
 document.querySelectorAll(".Membres > div").forEach(function(membre) {
+
     membre.addEventListener("click", function() {
         // Récupérer le nom du membre à partir du texte dans la balise span
         nomMembreActuel = membre.querySelector("span").innerText;
@@ -200,7 +199,7 @@ document.querySelectorAll(".Membres > div").forEach(function(membre) {
         });
 
 
-/* Carrousel */
+                            /* Carrousel */
 
 
 function updateCarrousel(nomMembre) {
@@ -228,7 +227,6 @@ document.body.onload = function() {
     // Charger le carrousel avec les images du membre par défaut
     updateCarrousel(nomMembreActuel);
 };
-
 
 
 // option fleches carrousel
@@ -275,96 +273,14 @@ function closePopup() {
     afficherMasquer();
 }
 
-// // Associer un gestionnaire d'événements à chaque membre (VERSION MOBILE)
 
-// document.querySelectorAll(".Membres > div").forEach(function(membre) {
-//     membre.addEventListener("click", function() {
-//         // Récupérer le nom du membre à partir du texte dans la balise span
-//         nomMembreActuel = membre.querySelector("span").innerText;
+                    // Caroussel mobile
 
-//         // Charger les informations du membre dans la modale
-//         chargerInformationsMembre(nomMembreActuel);
+// // Récupérez une référence vers le bouton boutonCarrouselMobile
+// const boutonCarrouselMobile = document.querySelector('.boutonCarrouselMobile');
 
-//         // Afficher la modale
-//         document.querySelector('.popup_containerMobile').classList.add("active");
-
-//               // Mettre à jour le carrousel avec les images du nouveau membre
-//               updateCarrousel(nomMembreActuel);
-//             });
-//         });
-
-
-
-/* Carrousel Mobile*/
-
-// function updateCarrouselMobile(nomMembre) {
-//     nbr = 20;
-//     p = 0;
-//     containerCarrouselMobile = document.getElementById("containerCarrouselMobile");
-//     // g = document.getElementById("g");
-//     // d = document.getElementById("d");
-//     containerCarrouselMobile.style.width = (420 * nbr) + "px";
-//     containerCarrouselMobile.style.transition = "all 0.5s ease"; 
-
-//     // Effacer les anciennes images du carrousel
-//     containerCarrouselMobile.innerHTML = "";
-
-//     for (i = 1; i <= nbr; i++) {
-//         div = document.createElement("div");
-//         div.className = "photo";
-//         div.style.backgroundImage = "url('images/Carrousel/" + nomMembre + i + ".jpg')";
-//         containerCarrouselMobile.appendChild(div);
-//     }
-//     afficherMasquer();
-// }
-
-// document.body.onload = function() {
-//     // Charger le carrousel avec les images du membre par défaut
-//     updateCarrouselMobile(nomMembreActuel);
-// };
-
-
-
-// // option fleches carrousel
-
-// g.onclick=function(){
-//     if(p>-nbr+1)
-//     p--;
-//     containerCarrouselMobile.style.transform="translate("+p*420+"px)";
-//     containerCarrouselMobile.style.trasition="all 0.5s ease ";
-//     afficherMasquer();
-// }
-
-// d.onclick=function(){
-//     if(p<0)
-//     p++;
-//     containerCarrouselMobile.style.transform="translate("+p*420+"px)";
-//     containerCarrouselMobile.style.transition="all 0.5s ease ";
-//     afficherMasquer();
-// }
-
-// // Options affichage desaffichage des fleches
-
-// function afficherMasquer(){
-//     if(p==-nbr+1)
-//         g.style.visibility="hidden";
-
-//     else
-//     g.style.visibility="visible";
-
-//     if(p==0)
-//     d.style.visibility="hidden";
-
-// else
-// d.style.visibility="visible";
-
-// }
-
-// // fermeture  et reinitialisation popup
-
-// function closePopup() {
-//     popupContainerMobile.classList.remove("active");
-//     p = 0;
-//     containerCarrouselMobile.style.transform = "translate(0px)";
-//     afficherMasquer();
-// }
+// // Ajoutez un gestionnaire d'événements de clic
+// boutonCarrouselMobile.addEventListener('click', function() {
+//     // Appelez la fonction updateCarrousel
+//     updateCarrousel(nomMembreActuel);
+// });
